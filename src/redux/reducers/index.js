@@ -1,7 +1,7 @@
 import { combineReducers } from 'redux';
 
-import addContactData from './addContactReducer';
+import getImageData from './getImagesReducer';
 
 export default combineReducers({
-  addContactData,
+  getImageData,
 });

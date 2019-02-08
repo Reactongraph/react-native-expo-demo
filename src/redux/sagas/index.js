@@ -1,9 +1,9 @@
 import { all } from 'redux-saga/effects';
-import { watchUserAddContact } from './addContactSaga';
+import { getImageList } from './getImagesSaga';
 
 const rootSaga = function* rootSaga() {
   yield all([
-    watchUserAddContact(),
+    getImageList(),
   ]);
 };
 
