@@ -1,6 +1,5 @@
-import { StyleSheet, Dimensions } from 'react-native';
-import * as Common from '../../common/common';
-const { height, width } = Dimensions.get('window');
+import { StyleSheet } from 'react-native';
+import * as Common from 'src/utils/common';
 
 const styles = StyleSheet.create({
   container: {
@@ -9,12 +8,12 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   buttonWrapper: {
-    backgroundColor: '#4267B2',
+    backgroundColor: Common.fbColor,
     padding: 10,
   },
   buttonTextStyle: {
-    color: '#fff',
-  }
+    color: Common.whiteColor,
+  },
 });
 
 module.exports = styles;
