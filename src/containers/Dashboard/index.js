@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-import { View, FlatList, Image, AsyncStorage } from "react-native";
+import { View, Image, AsyncStorage } from "react-native";
 import { connect } from 'react-redux';
+import Swiper from "react-native-swiper";
 import Header from 'src/component/Header';
 import styles from './styles';
 import * as Helper from "src/utils/helper";
@@ -34,18 +35,29 @@ class Dashboard extends Component {
     });
   }
 
-  _keyExtractor = (item, index) => item.id;
 
   handleLogout = () => {
-    AsyncStorage.setItem("loginData", '');
-    Helper.resetNavigation(this, 'Login', null);
-  }
+    AsyncStorage.setItem("loginData", "");
+    Helper.resetNavigation(this, "Login", null);
+  };
 
-  _renderItem = ({ item }) => (
-    <View>
-      <Image source={{ uri: item.src.original }} style={styles.imageStyle} />
-    </View>
-  );
+
+  showSwiper = () => {
+    return (
+      <Swiper style={styles.wrapper} showsButtons>
+        {ImageData.map((image, index)=>{
+          return (
+            <View key={index}>
+              <Image
+                source={{ uri: image.src.original }}
+                style={styles.imageStyle}
+              />
+            </View>
+          );
+        })}
+      </Swiper>
+    )
+  }
 
   render() {
     const { userName } = this.state;
@@ -58,13 +70,7 @@ class Dashboard extends Component {
           rightText="Logout"
           onPress={this.handleLogout}
         />
-        <View style={styles.imageDataView}>
-          <FlatList
-            data={ImageData}
-            keyExtractor={this._keyExtractor}
-            renderItem={this._renderItem}
-          />
-        </View>
+        <View style={styles.imageDataView}>{this.showSwiper()}</View>
       </View>
     );
   }

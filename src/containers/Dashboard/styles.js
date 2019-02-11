@@ -19,7 +19,7 @@ const styles = StyleSheet.create({
     marginRight: 10,
   },
   imageStyle: {
-    height: Common.deviceHeight / 3,
+    height: Common.deviceHeight - 100,
     width: Common.deviceWidth - 20,
     marginTop: 10,
     marginLeft: 10,
