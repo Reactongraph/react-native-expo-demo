@@ -33,6 +33,6 @@ npm install -g expo-cli
  
  -Run command
 ```
-yarn start`
+yarn start
 ```
 It will show a barcode and url. Scan barcode from expo app or type url.
