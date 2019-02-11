@@ -1,25 +1,31 @@
-import { StyleSheet, Dimensions } from 'react-native';
+import { StyleSheet } from 'react-native';
 import * as Common from '../../utils/common';
-
-const { height, width } = Dimensions.get('window');
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#F5FCFF',
   },
-  card: {
+  wrapperStyle: {
+    backgroundColor: Common.redColor,
     flex: 1,
-    borderRadius: 4,
-    borderWidth: 2,
-    borderColor: '#E8E8E8',
-    justifyContent: 'center',
-    backgroundColor: 'white',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    flexDirection: 'row',
   },
-  text: {
-    textAlign: 'center',
-    fontSize: 50,
-    backgroundColor: 'transparent',
+  titleTextStyle: {
+    color: Common.whiteColor,
+    fontWeight: 'bold',
+    marginLeft: 10,
+    marginRight: 10,
+  },
+  imageStyle: {
+    height: Common.deviceHeight / 3,
+    width: Common.deviceWidth - 20,
+    marginTop: 10,
+    marginLeft: 10,
+  },
+  imageDataView: {
+    flex: 15,
   },
 });
 
