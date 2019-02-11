@@ -10,12 +10,4 @@ module.exports = {
     }));
   },
 
-  navigateToPage(self, page, params = null) {
-    if (page === 'goBack' || page === '') {
-      self.props.navigation.goBack(null);
-    } else {
-      self.props.navigation.navigate(page, { ...params });
-    }
-  },
-
 };

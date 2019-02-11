@@ -11,4 +11,5 @@ module.exports = {
 
   fbColor: '#4267b2',
   whiteColor: '#ffffff',
+  redColor: '#FF0000',
 };

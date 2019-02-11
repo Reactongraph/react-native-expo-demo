@@ -1,9 +1,9 @@
 import { all } from 'redux-saga/effects';
-import { getImageList } from './getImagesSaga';
+import { watchGetImageList } from './getImagesSaga';
 
 const rootSaga = function* rootSaga() {
   yield all([
-    getImageList(),
+    watchGetImageList(),
   ]);
 };
 
