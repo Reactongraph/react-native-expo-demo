@@ -5,22 +5,8 @@ import Swiper from "react-native-swiper";
 import Header from 'src/component/Header';
 import styles from './styles';
 import * as Helper from "src/utils/helper";
+import { IMAGEDATA } from 'src/utils/constants';
 
-const ImageData = [
-  { src: { original:'https://images.pexels.com/photos/248797/pexels-photo-248797.jpeg',},},
-  { src: { original: 'https://images.pexels.com/photos/248797/pexels-photo-248797.jpeg', }, },
-  { src: { original: 'https://images.pexels.com/photos/248797/pexels-photo-248797.jpeg', }, },
-  { src: { original: 'https://images.pexels.com/photos/248797/pexels-photo-248797.jpeg', }, },
-  { src: { original: 'https://images.pexels.com/photos/248797/pexels-photo-248797.jpeg', }, },
-  { src: { original: 'https://images.pexels.com/photos/248797/pexels-photo-248797.jpeg', }, },
-  { src: { original: 'https://images.pexels.com/photos/248797/pexels-photo-248797.jpeg', }, },
-  { src: { original: 'https://images.pexels.com/photos/248797/pexels-photo-248797.jpeg', }, },
-  { src: { original: 'https://images.pexels.com/photos/248797/pexels-photo-248797.jpeg', }, },
-  { src: { original: 'https://images.pexels.com/photos/248797/pexels-photo-248797.jpeg', }, },
-  { src: { original: 'https://images.pexels.com/photos/248797/pexels-photo-248797.jpeg', }, },
-  { src: { original: 'https://images.pexels.com/photos/248797/pexels-photo-248797.jpeg', }, },
-
-];
 class Dashboard extends Component {
   state = {
     userName: ""
@@ -43,9 +29,12 @@ class Dashboard extends Component {
 
 
   showSwiper = () => {
+    // Called dummy free api. If api author stopped free service then get data from constants
+    const { getImageData } = this.props;
+    const IMAGE_POST_DATA = getImageData ? getImageData : IMAGEDATA;
     return (
       <Swiper style={styles.wrapper} showsButtons>
-        {ImageData.map((image, index)=>{
+        {IMAGEDATA.map((image, index)=>{
           return (
             <View key={index}>
               <Image
@@ -77,7 +66,7 @@ class Dashboard extends Component {
 }
 
 const mapStateToProps = state => ({
-  getImageData: state.getImageData,
+  getImageData: state.getImageData.getImages,
 });
 
 
