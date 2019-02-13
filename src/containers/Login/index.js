@@ -5,6 +5,7 @@ import * as Helper from 'src/utils/helper';
 import styles from './styles';
 
 export default class Login extends Component {
+  // Login with facebook.
   async logInFb() {
     try {
       const {

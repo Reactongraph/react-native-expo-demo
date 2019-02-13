@@ -15,13 +15,13 @@ class Dashboard extends Component {
     this.props.dispatch({
       type: "GET_IMAGES"
     });
-
+    // Get userName from local storage
     AsyncStorage.getItem("loginData").then(value => {
       this.setState({ userName: value });
     });
   }
 
-
+// Logout and clear userData
   handleLogout = () => {
     AsyncStorage.setItem("loginData", "");
     Helper.resetNavigation(this, "Login", null);

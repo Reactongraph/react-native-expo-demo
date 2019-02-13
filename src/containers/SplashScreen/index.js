@@ -3,6 +3,7 @@ import { View, AsyncStorage } from 'react-native';
 import * as Helper from 'src/utils/helper';
 
 export default class SplashScreen extends Component {
+  // Verify user is already logged in or not. And navigate accordingly.
   componentDidMount() {
     AsyncStorage.getItem('loginData').then((value) => {
       if (value) {
