@@ -8,6 +8,7 @@ This application is example of facebook login with expo and setup with redux and
 
 ## Main technology used
 - [React Native](https://github.com/facebook/react-native)
+- [expo](https://expo.io/learn)
 
 ## Running the project
 - Clone this project
