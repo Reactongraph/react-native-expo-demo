@@ -31,10 +31,10 @@ class Dashboard extends Component {
   showSwiper = () => {
     // Called dummy free api. If api author stopped free service then get data from constants
     const { getImageData } = this.props;
-    const IMAGE_POST_DATA = getImageData ? getImageData : IMAGEDATA;
+    const IMAGE_POST_DATA = getImageData.length ? getImageData : IMAGEDATA;
     return (
       <Swiper style={styles.wrapper} showsButtons>
-        {IMAGEDATA.map((image, index)=>{
+        {IMAGE_POST_DATA.map((image, index) => {
           return (
             <View key={index}>
               <Image
@@ -45,7 +45,7 @@ class Dashboard extends Component {
           );
         })}
       </Swiper>
-    )
+    );
   }
 
   render() {
