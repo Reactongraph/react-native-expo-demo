@@ -1,6 +1,11 @@
 # react-native-expo-demo
 This application is example of facebook login with expo and setup with redux and redux saga middleware.
 
+## Preview
+![facebooklogin](https://user-images.githubusercontent.com/37612566/52701063-5bebdb00-2f9f-11e9-8901-049413ae3187.png)
+![expo dashboard](https://user-images.githubusercontent.com/37612566/52701070-5e4e3500-2f9f-11e9-880f-2457c01beaab.png)
+
+
 ## Main technology used
 - [React Native](https://github.com/facebook/react-native)
 
