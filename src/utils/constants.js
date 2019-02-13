@@ -1,5 +1,6 @@
+// defines constants
 export const IMAGEDATA = [
-  { src: { original:'https://images.pexels.com/photos/248797/pexels-photo-248797.jpeg'} },
+  { src: { original: 'https://images.pexels.com/photos/248797/pexels-photo-248797.jpeg' } },
   { src: { original: 'https://images.pexels.com/photos/459225/pexels-photo-459225.jpeg' } },
   { src: { original: 'https://images.pexels.com/photos/34950/pexels-photo.jpg' } },
   { src: { original: 'https://images.pexels.com/photos/257360/pexels-photo-257360.jpeg' } },
